@@ -1,2 +1,2 @@
 # GitCommit
-https://www.caduu.com.br
+https://caduu.com.br
