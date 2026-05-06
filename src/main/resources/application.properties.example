@@ -1,0 +1,44 @@
+# =============================================================================
+#  application.properties.example
+#  Copie este arquivo para application.properties e preencha com seus dados.
+#  O arquivo application.properties está no .gitignore e NUNCA deve ser commitado.
+# =============================================================================
+
+# -----------------------------------------------
+# Discord
+# -----------------------------------------------
+discord.bot.token=SEU_TOKEN_DO_DISCORD_AQUI
+# ID do canal onde o bot enviará a mensagem de boas-vindas (0 = desabilita)
+discord.bot.channel-id=0
+
+# -----------------------------------------------
+# GitHub / Git
+# -----------------------------------------------
+github.repo.url=https://github.com/SeuUsuario/SeuRepositorioMirror.git
+github.pat=SEU_PAT_DO_GITHUB_AQUI
+git.author.name=Seu Nome
+git.author.email=seu@email.com
+
+# -----------------------------------------------
+# Diretório local para clonar o repositório
+# (não altere sem necessidade — está no .gitignore)
+# -----------------------------------------------
+git.local.dir=./mirror-repo
+
+# -----------------------------------------------
+# Spring Boot
+# -----------------------------------------------
+server.port=8080
+
+# -----------------------------------------------
+# Agendador Automático de Commits
+# -----------------------------------------------
+# true  = ativa o agendador na startup com o cron abaixo
+# false = desabilita completamente (o bean não é criado)
+commit.mirror.scheduler.enabled=true
+
+# Expressão Cron — 6 campos: segundos minutos horas dia-mês mês dia-semana
+# Exemplos:
+#   0 0 20 * * *         → todo dia às 20h00
+#   0 30 8 * * MON-FRI   → seg–sex às 08h30
+commit.mirror.scheduler.cron=0 0 20 * * *

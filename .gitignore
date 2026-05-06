@@ -1,0 +1,85 @@
+# ============================================================
+# SEGURANÇA — Nunca commitar credenciais reais
+# ============================================================
+# O arquivo com as credenciais reais é ignorado.
+# Use application.properties.example como template.
+src/main/resources/application.properties
+
+# Arquivo .env com credenciais para Docker Compose
+.env
+
+# ============================================================
+# BUILD — Artefatos gerados pelo Maven
+# ============================================================
+target/
+*.class
+*.jar
+*.war
+
+# ============================================================
+# RUNTIME — Repositório local clonado pelo JGit
+# ============================================================
+# Gerado automaticamente em tempo de execução; não deve ir ao Git.
+mirror-repo/
+mirror-data/
+
+# ============================================================
+# IDEs
+# ============================================================
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.springBeans
+.sts4-cache/
+
+# VS Code
+.vscode/
+
+# NetBeans
+nbproject/
+nbdist/
+build/
+nbbuild/
+
+# ============================================================
+# SISTEMA OPERACIONAL
+# ============================================================
+# Windows
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+# ============================================================
+# MAVEN WRAPPER / LOCAL
+# ============================================================
+# O Maven baixado localmente pelo run.bat não precisa ir ao Git.
+.maven/
+maven.zip
+
+# ============================================================
+# LOGS E TEMPORÁRIOS
+# ============================================================
+*.log
+logs/
+spring.log
+
+# ============================================================
+# ATALHOS E ARQUIVOS PESSOAIS
+# ============================================================
+*.lnk

@@ -1,0 +1,13 @@
+# Normaliza line endings para LF no repositório (cross-platform)
+* text=auto eol=lf
+
+# Força CRLF para scripts Windows (bat/cmd) no checkout
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Binários — sem conversão
+*.jar binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.gif binary

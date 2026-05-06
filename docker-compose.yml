@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  git-commit-mirror:
+    build: .
+    container_name: git_commit_mirror
+    restart: unless-stopped
+    environment:
+      - DISCORD_BOT_TOKEN=${DISCORD_BOT_TOKEN}
+      - DISCORD_CHANNEL_ID=${DISCORD_CHANNEL_ID:-0}
+      - GITHUB_REPO_URL=${GITHUB_REPO_URL}
+      - GITHUB_PAT=${GITHUB_PAT}
+      - GIT_AUTHOR_NAME=${GIT_AUTHOR_NAME:-Git Commit Mirror}
+      - GIT_AUTHOR_EMAIL=${GIT_AUTHOR_EMAIL:-mirror@example.com}
+      - SCHEDULER_ENABLED=${SCHEDULER_ENABLED:-true}
+      - SCHEDULER_CRON=${SCHEDULER_CRON:-0 0 20 * * *}
+      - TZ=America/Sao_Paulo
+    volumes:
+      - ./mirror-data:/app/mirror-repo
+    ports:
+      - "8080:8080"
